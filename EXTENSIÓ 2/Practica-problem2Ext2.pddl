@@ -1,0 +1,46 @@
+(define (problem problema2)
+
+    (:domain SeriesPelisExt2)
+    
+    (:objects 
+        divergente a1 insurgente tmsc1 tmsc2 tmsc3 hola monja a2 conj adeu buenas tardes b1 b2 b3 bbbb c1 c2 c3 cccc d1 d2 d3 dddd
+    )
+    
+    (:init
+        (predecesor divergente insurgente)
+        (predecesor tmsc1 tmsc2)
+        (predecesor tmsc2 tmsc3)
+        (predecesor divergente tmsc2)
+        (predecesor tmsc1 hola)
+        (paralela a1 a2)(paralela a2 a1)(paralela monja a1)(paralela monja a2)(paralela a1 monja)(paralela a2 monja)
+        (paralela buenas tardes)(paralela tardes buenas)
+        (paralela b1 b2)(paralela b2 b1)(paralela b3 b1)(paralela b3 b2)(paralela b1 b3)(paralela b2 b3)
+        (paralela c1 c2)(paralela c2 c1)(paralela c3 c1)(paralela c3 c2)(paralela c1 c3)(paralela c2 c3)
+        (paralela d1 d2)(paralela d2 d1)(paralela d3 d1)(paralela d3 d2)(paralela d1 d3)(paralela d2 d3)
+        (predecesor a1 conj)
+        (predecesor a2 conj)
+        (predecesor monja conj)
+        (predecesor b1 bbbb)
+        (predecesor b2 bbbb)
+        (predecesor b3 bbbb)
+        (predecesor c1 cccc)
+        (predecesor c2 cccc)
+        (predecesor c3 cccc)
+        (predecesor d1 dddd)
+        (predecesor d2 dddd)
+        (predecesor d3 dddd)
+        (final insurgente)
+        (final tmsc3)
+        (final hola)
+        (final adeu)
+        (final conj)
+        (final bbbb)
+        (final cccc)
+        (final dddd)
+        (paralelas_ok)
+    )
+    
+    (:goal 
+        (forall (?c) (visto ?c))
+    )
+)

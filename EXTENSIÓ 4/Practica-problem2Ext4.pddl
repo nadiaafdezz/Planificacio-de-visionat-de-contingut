@@ -1,0 +1,52 @@
+(define (problem problema2)
+
+    (:domain SeriesPelisExt4)
+
+    (:objects
+        contenido_1 contenido_2 contenido_3 contenido_4 contenido_5 contenido_6 contenido_7 contenido_8 contenido_9 contenido_10
+    )
+
+    (:init
+        (paralela contenido_1 contenido_2)
+        (paralela contenido_2 contenido_1)
+        (paralela contenido_1 contenido_3)
+        (paralela contenido_3 contenido_1)
+        (paralela contenido_2 contenido_3)
+        (paralela contenido_3 contenido_2)
+        (paralela contenido_4 contenido_6)
+        (paralela contenido_6 contenido_4)
+        (paralela contenido_4 contenido_5)
+        (paralela contenido_5 contenido_4)
+        (paralela contenido_5 contenido_6)
+        (paralela contenido_6 contenido_5)
+		(paralela contenido_7 contenido_8)
+        (paralela contenido_8 contenido_7)
+        (paralela contenido_8 contenido_9)
+        (paralela contenido_7 contenido_9)
+        (paralela contenido_10 contenido_9)
+        (paralela contenido_9 contenido_7)
+        (paralela contenido_7 contenido_10)
+        (paralela contenido_10 contenido_8)
+        (paralela contenido_9 contenido_10)
+        (paralela contenido_10 contenido_7)
+        (paralela contenido_8 contenido_10)
+        (paralela contenido_9 contenido_8)
+        (=(minutos_contenido contenido_1) 65)
+        (=(minutos_contenido contenido_2) 97)
+        (=(minutos_contenido contenido_3) 87)
+        (=(minutos_contenido contenido_4) 120)
+        (=(minutos_contenido contenido_5) 61)
+        (=(minutos_contenido contenido_6) 65)
+        (=(minutos_contenido contenido_7) 87)
+        (=(minutos_contenido contenido_8) 120)
+        (=(minutos_contenido contenido_9) 61)
+        (=(minutos_contenido contenido_10) 65)
+        (paralelas_ok)
+        (= (minutos_vistos) 0)
+    )
+
+    (:goal 
+        (forall (?c) (visto ?c))
+    )
+)
+
